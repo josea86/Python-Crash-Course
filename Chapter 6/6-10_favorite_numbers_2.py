@@ -7,7 +7,7 @@
 # This inner dictionary stores multiple favorite numbers, with keys like 'number_1', 'number_2', etc.,
 # and their corresponding number values (stored as strings).
 # We could optimized this program if we use a list inside the favorite_numbers dictionary
-# instead of nested dictionaries. But the purpouse of this exercise is using nesting dictionaries.
+# instead of nested dictionaries. But the purpouse of this exercise is using nested dictionaries.
 
 favorite_numbers = {
     'Marta' : {'number_1' : '13',
