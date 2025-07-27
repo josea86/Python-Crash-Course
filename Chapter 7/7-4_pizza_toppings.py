@@ -1,15 +1,10 @@
 # This program simulates a pizza topping selection process.
 # Users can choose toppings, view their current selections, or quit.
 
-# --- IMPORTANT NOTE FOR FUTURE DEVELOPMENT ---
-# Currently, this program DOES NOT prevent duplicate toppings.
-# This feature will be added in a future update.
-# ---------------------------------------------
-
 # --- Topping Definitions & Initialization ---
 
 # Tuple of available pizza toppings (tuple).
-pizza_toppings = ('mozzarella', 'mushrooms', 'bacon', 'olives', 'pepperoni', 'cheddar', 'tomato', 'onion')
+pizza_toppings = ('mozzarella', 'mushrooms', 'bacon', 'olives', 'pepperoni', 'cheddar', 'tomato', 'onion', 'garlic')
 
 # List to store toppings selected by the user.
 pizza_topping = []
@@ -43,8 +38,8 @@ while active:
         # Check if user wants to list current toppings.
         elif requested_topping == 'list':
             print('Your pizza has the following toppings:')
-            # Loop and print each selected topping.
-            for topping in pizza_topping:
+            # Loop and print each selected topping. Remove duplicate items too.
+            for topping in set(pizza_topping):
                 print('* ' + topping.title())
         # If topping is not available.
         elif requested_topping not in pizza_toppings:
