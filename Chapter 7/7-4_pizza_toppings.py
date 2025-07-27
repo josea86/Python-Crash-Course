@@ -13,18 +13,23 @@ pizza_topping = []
 active = True
 
 # --- Display Available Toppings ---
-
+print ('Welcome to our italian pizzeria!')
 print('The available toppings are:')
 # Loop and print each available topping.
 for pizzas in pizza_toppings:
     print('* ' + pizzas.title() + '.')
+
+# Inform the user how to exit the program.
+print ("\nIf you want to quit the program, just enter 'quit' at any moment.")
+# Inform the user how to view their current toppings.
+print ("If you want to see a list of the toppings you've just added to your pizza, type 'list'")
 
 # --- Main Topping Selection Loop ---
 
 # Loop continues until 'active' is False.
 while active:
     # Get user input and convert to lowercase.
-    requested_topping = input('What pizza topping would you like to add to your pizza? ').lower()
+    requested_topping = input('\nWhat pizza topping would you like to add to your pizza? ').lower()
 
     # Check if user wants to quit.
     if requested_topping == 'quit':
@@ -37,7 +42,7 @@ while active:
             pizza_topping.append(requested_topping) # Add to user's pizza
         # Check if user wants to list current toppings.
         elif requested_topping == 'list':
-            print('Your pizza has the following toppings:')
+            print('\nYour pizza has the following toppings:\n')
             # Loop and print each selected topping. Remove duplicate items too.
             for topping in set(pizza_topping):
                 print('* ' + topping.title())
